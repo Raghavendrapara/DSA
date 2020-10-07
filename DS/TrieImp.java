@@ -27,7 +27,6 @@ class TrieImp{
 			obj.insert(root,word);
 		}
 		//else
-		
 			if(obj.search(root,"hell")){
 
 			System.out.println("Present");
@@ -38,15 +37,16 @@ class TrieImp{
 		    System.out.println("Not Present");
 		    
 		    }
-		/*testing	
+			/*
 			if(obj.search(root,"fasti"))
 			System.out.println("Present");
 			else System.out.println("Not Present");
 		    if(obj.search(root,"fasting"))
 			System.out.println("Present");
   			else System.out.println("Not Present");
-		*/
-
+		   */
+		
+		
 	}
 
 	void insert(Trie root, String word){
@@ -55,13 +55,13 @@ class TrieImp{
 		for(int index=0;index<word.length();index++){
      
           char ch=word.charAt(index);
-          temp.character[ch-97]=new Trie();
+          temp.character.put(ch,new Trie());
           if(index==word.length()-1){
 
-         	temp.character[ch-97].isEndOfWord=true;
+         	temp.character.get(ch).isEndOfWord=true;
 		   }
 		  
-		  temp=temp.character[ch-97];
+		  temp=temp.character.get(ch);
 		
 		}
        
@@ -76,16 +76,16 @@ class TrieImp{
 			
 			if(in==word.length()-1){
 		
-				if(temp.character[ch-97].isEndOfWord==true){
+				if(temp.character.get(ch).isEndOfWord==true){
 		
 					return true;
 		
 				}
 			}
 
-			if(temp.character[ch-97]!=null){
+			if(temp.character.get(ch)!=null){
 		
-				temp=temp.character[ch-97];
+				temp=temp.character.get(ch);
 		
 			}
 
@@ -96,13 +96,13 @@ class TrieImp{
 
 class Trie{
 	
-	Trie character[];
+	HashMap<Character,Trie> character;
 	boolean isEndOfWord;
 
 	Trie()
 	{
 
-		character=new Trie[26];
+		character=new HashMap<>();
 		isEndOfWord=false;
 
 	}
