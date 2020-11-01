@@ -1,10 +1,16 @@
 /*input
-4
-4
-1 2
+5
+5
+5 2
 1 3
 2 4
 3 4
+1 5
+*/
+
+/*
+Topological Sorting Using kahn's Algorithm
+Prints the Lexicographically smallest or largest order
 */
 import java.util.*;
 class KahnTSort{
@@ -16,19 +22,24 @@ class KahnTSort{
 		System.out.println("Enter Number Of Vertices");
 		int ver = sc.nextInt();
 
-		for(int ind=0;ind<=ver;ind++)
+		for(int ind=0;ind<=ver;ind++){
+
 			adjList.add(new ArrayList<Integer>());
+		
+		}
 
 		System.out.println("Enter Number of Edges");
 		int edges=sc.nextInt();
-		for(int index=1;index<=edges;index++)
-		{
+		for(int index=1;index<=edges;index++){
+
 			int first = sc.nextInt();
 			int second = sc.nextInt();
 			adjList.get(first).add(second);
+		
 		}
 
-		PriorityQueue<Integer> pqueue = new PriorityQueue<>((n1,n2)->(-n1+n2));
+        //For Lexicographic Smallest TSort.For Lexicographic Largest reverse the PQueue order
+		PriorityQueue<Integer> pqueue = new PriorityQueue<>((n1,n2)->(n1-n2));
 
 		int indegree[] = new int[ver+1];
 		for(ArrayList<Integer> arr:adjList)

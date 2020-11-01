@@ -28,7 +28,7 @@ class SparseTable{
         SparseTable ob=new SparseTable();
 
         ob.build(inp_arr,sparse_table);
-        System.out.println(ob.query(sparse_table, 1, 8,log));
+        System.out.println(ob.minQuery(sparse_table, 14, 14,log));
 
 
 
@@ -53,11 +53,11 @@ class SparseTable{
 
 		}
 
-		int query(int [][]sparse_table, int left, int right, int log[]){
+		int minQuery(int [][]sparse_table, int left, int right, int log[]){
 
 			int j=log[right-left+1];
+
 			return Math.min(sparse_table[left][j],sparse_table[right- (1<<j) +1][j]);
 
 
-		}
 }
