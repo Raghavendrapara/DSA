@@ -1,6 +1,6 @@
 /*input
-abcfabcx
-bcabcfabcgdfgfrsscchjdcdjgcdhcg
+abcfabcf
+bcabcfabcfabcfgdfgfrsscchabcfabcfjdcdjgcdhcg
 */
 import java.util.*;
 /*
@@ -44,7 +44,7 @@ class KMP{
 
          int k=0;
          int cnt=0;
-         outer:
+         //outer:
          for(int i=0;i<ss.length();i++)
          {
               if(str.charAt(k)==ss.charAt(i)){
@@ -58,7 +58,8 @@ class KMP{
               if(k==str.length())  
               {
                 System.out.printf("Found at %d",i);
-                break outer;
+                //break outer;
+                k=0;
               }
 
              }
