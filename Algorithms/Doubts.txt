@@ -1,0 +1,4 @@
+Why Java can execute nested functions in any order but in c++ we have to define nested function beforehand, say "merge for mergesort"?
+
+
+
