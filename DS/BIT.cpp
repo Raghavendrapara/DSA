@@ -17,7 +17,7 @@ int query(int* BIT, int index){
 	int sum=0;
 	for(;index>0;index-=(index & (-index)))
 	sum=sum+BIT[index];
-return sum;
+	return sum;
 }
 
 int main()
