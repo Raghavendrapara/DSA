@@ -1,5 +1,3 @@
-package algo;
-
 public class PassByReference {
 
 	public static void main(String args[])

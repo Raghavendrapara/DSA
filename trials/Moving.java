@@ -1,5 +1,3 @@
-package algo;
-
 import java.util.Scanner;
 import java.util.StringTokenizer;
 import java.io.*;

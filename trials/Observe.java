@@ -1,5 +1,3 @@
-package algo;
-
 public class Observe {
 
 	public static void main(String args[]) {
