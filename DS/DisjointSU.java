@@ -47,7 +47,7 @@ class DisjointSU{
 			{
 				p[p2]=p1;
 				size[p1]+=size[p2];
-		package 	}
+ 	}
 	}
 
 	public static void main(String[] args) {

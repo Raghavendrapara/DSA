@@ -1,4 +1,3 @@
-package algo;
 
 /*
  * Code by Shay Mozes (2007)

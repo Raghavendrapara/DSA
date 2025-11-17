@@ -2,7 +2,8 @@
 5
 1 2 3 4 5
 */
-#include<bits/stdc++.h>
+#include<iostream>
+#include<cstring>
 using namespace std;
 
 void update(int* arr, int* BIT, int index, int val, int size)

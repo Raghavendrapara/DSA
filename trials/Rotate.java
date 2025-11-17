@@ -25,19 +25,5 @@ int arr[][]=new int[m][n];
 
 
 }
-int[][] rotate1(int mat[][]){
 
-
-
-
-}
-int[][] rotate2(int mat[][]){
-
-}
-int[][] rotate3(int mat[][]){
-
-}
-int[][] rotate1(int mat[][]){
-
-}
 }

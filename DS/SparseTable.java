@@ -60,4 +60,7 @@ class SparseTable{
 			return Math.min(sparse_table[left][j],sparse_table[right- (1<<j) +1][j]);
 
 
-}
+
+		}
+	}
+	

@@ -1,4 +1,7 @@
-#include<bits/stdc++.h>
+#include <iostream>  // for cout, cin
+#include <stack>     // for stack
+#include <algorithm> // for min, max
+#include <utility>   // for pair
 using namespace std;
 template <typename T>
 class StackWithMin {
@@ -36,7 +39,7 @@ int main(){
     StackWithMin<const int> obj;
     obj.push(2);
     obj.push(5);
-    obj.push(4);ll
+    obj.push(4);
     obj.push(1);
     cout<<obj.getMin()<<endl;
     cout<<obj.size()<<endl;
