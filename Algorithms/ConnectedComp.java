@@ -41,7 +41,7 @@ class ConnectedComp{
 				arr.add(temp);
 			}
 		}
-			System.out.println(arr);
+			out.println(arr);
 		
 
 	}
